@@ -115,7 +115,7 @@ def _propose(node, proposal, args):
             dev_par['db'] = db
             dev_par['wal_size'] = args.get('wal-size')
             dev_par['db_size'] = args.get('db-size')
-        elif type(v) is str:
+        elif type(v) is str and v:
             if format_ is 'bluestore':
                 dev_par['wal'] = v
                 dev_par['db'] = v
